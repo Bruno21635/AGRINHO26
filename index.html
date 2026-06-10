@@ -1,334 +1,80 @@
-<!import { ImageWithFallback } from './components/figma/ImageWithFallback';
-import { Leaf, Sprout, Droplets, TrendingUp, Users, Award, ArrowRight, Wind, Sun, Recycle } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Agro Forte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-export default function App() {
-  return (
-    <div className="size-full bg-white overflow-auto">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Leaf className="w-8 h-8 text-green-600" />
-            <span className="text-xl text-gray-900">Agro Forte</span>
-          </div>
-          <div className="flex gap-8">
-            <a href="#sobre" className="text-gray-600 hover:text-green-600 transition-colors">Sobre</a>
-            <a href="#pilares" className="text-gray-600 hover:text-green-600 transition-colors">Pilares</a>
-            <a href="#impacto" className="text-gray-600 hover:text-green-600 transition-colors">Impacto</a>
-            <a href="#contato" className="text-gray-600 hover:text-green-600 transition-colors">Contato</a>
-          </div>
-        </nav>
-      </header>
-
-      {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <ImageWithFallback
-            src="https://images.unsplash.com/photo-1757525473930-0b82237e55ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZ3JpY3VsdHVyZSUyMHN1c3RhaW5hYmxlJTIwZmFybWluZ3xlbnwxfHx8fDE3Nzc0NjIwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Campo sustentável"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-green-700/60"></div>
-        </div>
-
-        <div className="relative max-w-4xl mx-auto px-6 text-center text-white">
-          <h1 className="text-6xl mb-6">Agro Forte, Futuro Sustentável</h1>
-          <p className="text-2xl mb-8 text-green-50">Equilíbrio perfeito entre produção eficiente e preservação ambiental</p>
-          <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg flex items-center gap-2 mx-auto transition-colors">
-            Conheça Nossa Missão
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
-      </section>
-
-      {/* Sobre Section */}
-      <section id="sobre" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl text-gray-900 mb-6">Nossa Visão</h2>
-              <p className="text-lg text-gray-700 mb-4">
-                O Agro Forte representa uma nova era na agricultura brasileira, onde a produtividade e a sustentabilidade caminham juntas.
-                Nosso compromisso é com práticas que garantem alimentos de qualidade hoje, sem comprometer os recursos para as gerações futuras.
-              </p>
-              <p className="text-lg text-gray-700 mb-6">
-                Através da inovação tecnológica, conhecimento tradicional e respeito ao meio ambiente, construímos um modelo agrícola
-                que fortalece a economia e protege nosso planeta.
-              </p>
-              <div className="flex gap-4">
-                <div className="flex-1 bg-white p-6 rounded-lg shadow-sm">
-                  <div className="text-3xl text-green-600 mb-2">100%</div>
-                  <div className="text-gray-600">Sustentável</div>
-                </div>
-                <div className="flex-1 bg-white p-6 rounded-lg shadow-sm">
-                  <div className="text-3xl text-green-600 mb-2">+50%</div>
-                  <div className="text-gray-600">Produtividade</div>
-                </div>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1775888915363-ee1d8bb22f67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw3fHxhZ3JpY3VsdHVyZSUyMHN1c3RhaW5hYmxlJTIwZmFybWluZ3xlbnwxfHx8fDE3Nzc0NjIwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Mudas verdes"
-                className="w-full h-64 object-cover rounded-lg"
-              />
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1776660914932-6cb3d93baeb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxhZ3JpY3VsdHVyZSUyMHN1c3RhaW5hYmxlJTIwZmFybWluZ3xlbnwxfHx8fDE3Nzc0NjIwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Campo ao pôr do sol"
-                className="w-full h-64 object-cover rounded-lg mt-8"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pilares Section */}
-      <section id="pilares" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl text-center text-gray-900 mb-4">Nossos Pilares</h2>
-          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            Cinco pilares fundamentais que sustentam nossa abordagem integrada para uma agricultura forte e sustentável
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Pilar 1 */}
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl border border-amber-200">
-              <div className="w-16 h-16 bg-amber-500 rounded-xl flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl text-gray-900 mb-4">Produção Eficiente</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 mt-1">•</span>
-                  <span>Agricultura de precisão com IoT e Big Data</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 mt-1">•</span>
-                  <span>Drones e sensores inteligentes</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 mt-1">•</span>
-                  <span>Irrigação e fertilização otimizadas</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Pilar 2 */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-200">
-              <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-6">
-                <Leaf className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl text-gray-900 mb-4">Meio Ambiente</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Conservação do solo e rotação de culturas</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Gestão sustentável de recursos hídricos</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-600 mt-1">•</span>
-                  <span>Proteção da biodiversidade</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Pilar 3 */}
-            <div className="bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-200">
-              <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
-                <Recycle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl text-gray-900 mb-4">Sustentabilidade</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-purple-600 mt-1">•</span>
-                  <span>Práticas regenerativas e agrofloresta</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-purple-600 mt-1">•</span>
-                  <span>Economia circular e bioenergia</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-purple-600 mt-1">•</span>
-                  <span>Certificações orgânicas e carbono neutro</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Pilar 4 */}
-            <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border border-red-200">
-              <div className="w-16 h-16 bg-red-500 rounded-xl flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl text-gray-900 mb-4">Aspectos Sociais</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">•</span>
-                  <span>Capacitação e educação ambiental</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">•</span>
-                  <span>Geração de emprego local</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">•</span>
-                  <span>Desenvolvimento comunitário</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Pilar 5 */}
-            <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl border border-indigo-200">
-              <div className="w-16 h-16 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <Award className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl text-gray-900 mb-4">Viabilidade Econômica</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-indigo-600 mt-1">•</span>
-                  <span>Crédito rural e incentivos fiscais</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-indigo-600 mt-1">•</span>
-                  <span>Produtos premium para exportação</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-indigo-600 mt-1">•</span>
-                  <span>Retorno sustentável de investimentos</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Balance Card */}
-            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-2xl border border-teal-200">
-              <div className="w-16 h-16 bg-teal-600 rounded-xl flex items-center justify-center mb-6">
-                <Sun className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl text-gray-900 mb-4">Equilíbrio</h3>
-              <p className="text-gray-700">
-                A harmonia entre todos os pilares garante um sistema agrícola resiliente,
-                produtivo e em sintonia com a natureza.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Impacto Visual */}
-      <section id="impacto" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl text-center text-gray-900 mb-4">Nosso Impacto</h2>
-          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            Transformando a agricultura através de práticas sustentáveis e tecnologia de ponta
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1703932892707-96a68172d8ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhZ3JpY3VsdHVyZSUyMHN1c3RhaW5hYmxlJTIwZmFybWluZ3xlbnwxfHx8fDE3Nzc0NjIwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Campo com turbina eólica"
-              className="w-full h-80 object-cover rounded-xl shadow-lg"
-            />
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1721928005280-a5ac7cc2c50d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhZ3JpY3VsdHVyZSUyMHN1c3RhaW5hYmxlJTIwZmFybWluZ3xlbnwxfHx8fDE3Nzc0NjIwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Cultivo em larga escala"
-              className="w-full h-80 object-cover rounded-xl shadow-lg"
-            />
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1760286834274-4f13c9747f7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxhZ3JpY3VsdHVyZSUyMHN1c3RhaW5hYmxlJTIwZmFybWluZ3xlbnwxfHx8fDE3Nzc0NjIwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Plantação de arroz"
-              className="w-full h-80 object-cover rounded-xl shadow-lg"
-            />
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <Droplets className="w-12 h-12 text-blue-500 mx-auto mb-4" />
-              <div className="text-3xl text-gray-900 mb-2">-40%</div>
-              <div className="text-gray-600">Uso de Água</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <Wind className="w-12 h-12 text-green-500 mx-auto mb-4" />
-              <div className="text-3xl text-gray-900 mb-2">-60%</div>
-              <div className="text-gray-600">Emissões CO₂</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <Sprout className="w-12 h-12 text-emerald-500 mx-auto mb-4" />
-              <div className="text-3xl text-gray-900 mb-2">+85%</div>
-              <div className="text-gray-600">Saúde do Solo</div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <Award className="w-12 h-12 text-amber-500 mx-auto mb-4" />
-              <div className="text-3xl text-gray-900 mb-2">100%</div>
-              <div className="text-gray-600">Rastreável</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section id="contato" className="py-20 bg-gradient-to-r from-green-600 to-emerald-600">
-        <div className="max-w-4xl mx-auto px-6 text-center text-white">
-          <h2 className="text-4xl mb-6">Junte-se à Revolução Verde</h2>
-          <p className="text-xl mb-8 text-green-50">
-            Faça parte do movimento que está transformando a agricultura brasileira.
-            Produtividade e sustentabilidade andando juntas.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <button className="bg-white text-green-600 px-8 py-4 rounded-full text-lg hover:bg-green-50 transition-colors">
-              Saiba Mais
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full text-lg hover:bg-white/10 transition-colors">
-              Entre em Contato
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Leaf className="w-6 h-6 text-green-500" />
-                <span className="text-white text-lg">Agro Forte</span>
-              </div>
-              <p className="text-sm">
-                Construindo um futuro sustentável através da agricultura responsável.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-white mb-4">Navegação</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#sobre" className="hover:text-green-500 transition-colors">Sobre</a></li>
-                <li><a href="#pilares" className="hover:text-green-500 transition-colors">Pilares</a></li>
-                <li><a href="#impacto" className="hover:text-green-500 transition-colors">Impacto</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white mb-4">Recursos</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-green-500 transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-green-500 transition-colors">Pesquisas</a></li>
-                <li><a href="#" className="hover:text-green-500 transition-colors">Parceiros</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white mb-4">Contato</h4>
-              <ul className="space-y-2 text-sm">
-                <li>contato@agroforte.com.br</li>
-                <li>+55 (11) 9999-9999</li>
-                <li>São Paulo, SP</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm">
-            <p>&copy; 2026 Agro Forte. Todos os direitos reservados. Equilibrando produção e meio ambiente.</p>
-          </div>
-        </div>
-      </footer>
+<header>
+  <nav class="nav">
+    <h1>🌿 Agro Forte</h1>
+    <div class="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#pilares">Pilares</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#contato">Contato</a>
     </div>
-  );
-}
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Agro Forte, Futuro Sustentável</h1>
+    <p>Equilíbrio entre produção e preservação</p>
+    <button>Conheça Nossa Missão →</button>
+  </div>
+</section>
+
+<section id="sobre" class="section">
+  <h2>Nossa Visão</h2>
+  <p>
+    O Agro Forte representa uma nova era na agricultura brasileira,
+    com produtividade e sustentabilidade juntas.
+  </p>
+</section>
+
+<section id="pilares" class="section bg-light">
+  <h2>Nossos Pilares</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Produção Eficiente</h3>
+      <p>Tecnologia, drones e otimização agrícola.</p>
+    </div>
+
+    <div class="card">
+      <h3>Meio Ambiente</h3>
+      <p>Conservação do solo e biodiversidade.</p>
+    </div>
+
+    <div class="card">
+      <h3>Sustentabilidade</h3>
+      <p>Agrofloresta e economia circular.</p>
+    </div>
+  </div>
+</section>
+
+<section id="impacto" class="section">
+  <h2>Nosso Impacto</h2>
+
+  <div class="stats">
+    <div>-40% Água</div>
+    <div>-60% CO₂</div>
+    <div>+85% Solo</div>
+  </div>
+</section>
+
+<section id="contato" class="cta">
+  <h2>Junte-se à Revolução Verde</h2>
+  <button>Entre em Contato</button>
+</section>
+
+<footer>
+  <p>© 2026 Agro Forte</p>
+</footer>
+
+</body>
+</html>
